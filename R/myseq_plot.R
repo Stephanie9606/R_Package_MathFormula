@@ -1,3 +1,14 @@
+#' Produce the plot by given data along using myseq_n() function
+#'
+#' @description
+#' For hw04 function 2, produce the plot by given df.
+#'
+#' @param numdf a four col df
+#'
+#' @return a line plot of the output values for the different values of n
+#' @export
+#'
+#' @examples
 myseq_plot <- function(numdf) {
   indf <- tibble(n = 0, output = 0) # blank df
   numdf <- tibble(numdf)
