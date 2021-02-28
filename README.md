@@ -10,8 +10,7 @@ The goal of hw04pStephanie9606 is to …
 
 ## Installation
 
-This package is only available by permission of the author at
-[CRAN](https://CRAN.R-project.org) with:
+This package is only available by permission of the author
 
 ``` r
 install.packages("hw04pStephanie9606")
