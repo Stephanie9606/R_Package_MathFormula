@@ -1,5 +1,5 @@
 Package: hw04pStephanie9606
-Title: What the Package Does (One Line, Title Case)
+Title: HW04 Functions
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Stephanie",
@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "first.last@example.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: This package contains two function myseq_n and myseq_plot for DS hw04
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
