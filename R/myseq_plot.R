@@ -23,20 +23,20 @@
 #' myseq_plot(numdf = my_data)
 
 myseq_plot <- function(numdf) {
-  indf <- tibble(n = 0, output = 0) # blank df
+  bkdf <- tibble(n = 0, output = 0) # blank df
   numdf <- tibble(numdf)
   for (i in 1:nrow(numdf)) {
     x <- c(numdf[[i, 1]], numdf[[i, 2]], numdf[[i, 3]]) # extract x, y, z (separate extract)
     n <- numdf[[i, 4]] # extract n
-    myseq_n(x, n) -> indf[i, 2] # put "x" and "n" in the blank df
-    n -> indf[i, 1] #the first column
+    myseq_n(x, n) -> bkdf[i, 2] # put "x" and "n" in the blank df
+    n -> bkdf[i, 1] # put "x" and "n" in the blank df
   }
 
-  indf[ ,2] <- round(indf[ ,2], digits = 3) # for ggtitle
-  innerplot <- indf %>% # plot
+  indf[ ,2] <- round(bkdf[ ,2], digits = 3) # for ggtitle
+  innerplot <- bkdf %>% # plot
     ggplot2::ggplot(mapping = ggplot2::aes(x = n, y = output)) +
     ggplot2::geom_line() +
-    ggplot2::labs(title = paste("My Sequence:", indf[ ,2]))
+    ggplot2::labs(title = paste("My Sequence:", bkdf[ ,2])) # print the given title
 
   return(innerplot)
 }
