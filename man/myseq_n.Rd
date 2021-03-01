@@ -2,7 +2,7 @@
 % Please edit documentation in R/myseq_n.R
 \name{myseq_n}
 \alias{myseq_n}
-\title{Get the value of the formula}
+\title{Get the value from the formula}
 \usage{
 myseq_n(x, n)
 }
@@ -15,5 +15,13 @@ myseq_n(x, n)
 the answer of the recursive sequence
 }
 \description{
-For hw04 function 1, get the answer from the given formula.
+For hw04 function 1, get the answer from the given formula
+Xn = Xn−1 + (Xn−3−Xn−2)/n
+}
+\examples{
+myseq_n(x = c(2, 3, 3), n = 3)
+myseq_n(x = c(2, 4, 3), n = 4)
+myseq_n(x = c(2, 4, 3), n = 5)
+myseq_n(x = c(2, 4, 3), n = 6)
+myseq_n(x = c(2, 4, 3), n = 7)
 }

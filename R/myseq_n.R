@@ -1,7 +1,8 @@
-#' Get the value of the formula
+#' Get the value from the formula
 #'
 #' @description
-#' For hw04 function 1, get the answer from the given formula.
+#' For hw04 function 1, get the answer from the given formula
+#' Xn = Xn−1 + (Xn−3−Xn−2)/n
 #'
 #' @param x numeric
 #' @param n integer which is >0
@@ -10,6 +11,12 @@
 #' @export
 #'
 #' @examples
+#' myseq_n(x = c(2, 3, 3), n = 3)
+#' myseq_n(x = c(2, 4, 3), n = 4)
+#' myseq_n(x = c(2, 4, 3), n = 5)
+#' myseq_n(x = c(2, 4, 3), n = 6)
+#' myseq_n(x = c(2, 4, 3), n = 7)
+
 myseq_n <- function(x, n) {
   stopifnot(length(x) == 3 & is.numeric(x)) # "x" error checking: correct length and type
   stopifnot(n > 0) # "n" error checking: type and is greater than 0
@@ -24,9 +31,3 @@ myseq_n <- function(x, n) {
   }
   return(numvec[n])
 }
-# test
-myseq_n(x = c(2, 3, 3), n = 3)
-myseq_n(x = c(2, 4, 3), n = 4)
-myseq_n(x = c(2, 4, 3), n = 5)
-myseq_n(x = c(2, 4, 3), n = 6)
-myseq_n(x = c(2, 4, 3), n = 7)
