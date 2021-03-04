@@ -8,7 +8,7 @@
 #' @param n integer which is >0
 #'
 #' @return the answer of the recursive sequence
-#' @export
+#' @export myseq_n
 #'
 #' @examples
 #' myseq_n(x = c(2, 3, 3), n = 3)

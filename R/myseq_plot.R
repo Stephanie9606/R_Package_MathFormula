@@ -5,8 +5,11 @@
 #'
 #' @param numdf a four col df
 #'
+#' @importFrom tibble tibble tribble as_tibble
+#' @importFrom ggplot2 aes geom_line labs
+#'
 #' @return a line plot of the output values for the different values of n
-#' @export
+#' @export myseq_plot
 #'
 #' @examples
 #' my_data <- tibble::tribble(
@@ -23,6 +26,7 @@
 #' myseq_plot(numdf = my_data)
 
 myseq_plot <- function(numdf) {
+  output <- NULL
   bkdf <- tibble(n = 0, output = 0) # blank df
   numdf <- tibble(numdf)
   for (i in 1:nrow(numdf)) {
@@ -32,7 +36,7 @@ myseq_plot <- function(numdf) {
     n -> bkdf[i, 1] # put "x" and "n" in the blank df
   }
 
-  indf[ ,2] <- round(bkdf[ ,2], digits = 3) # for ggtitle
+  bkdf[ ,2] <- round(bkdf[ ,2], digits = 3) # for ggtitle
   innerplot <- bkdf %>% # plot
     ggplot2::ggplot(mapping = ggplot2::aes(x = n, y = output)) +
     ggplot2::geom_line() +
